@@ -1,1 +1,1 @@
-mongo movielens --quiet --eval "var input_tag = %1;" q2.js
+mongo movielens --quiet --eval "var input_tag = \"italian western\";" q2.js
