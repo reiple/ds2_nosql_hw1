@@ -1,10 +1,11 @@
+// 초기화
+db.ml_movies.dropIndexes()
+db.ml_ratings.dropIndexes()
+db.ml_tags.dropIndexes()
 
-db.ml_tags.find({tag: input_tag}, {movieId: 1}).forEach(
-    function(doc) { 
-        db.ml_movies.find({movieId: doc.movieId}).forEach(
-            function(movie_doc) { 
-                print(movie_doc.title) 
-            }
-        )
-    }
-)
+// for q2
+db.ml_tags.createIndex({tag: 1})
+db.ml_movies.createIndex({movieId: 1})
+// for q3
+db.ml_movies.createIndex({title: 1})
+db.ml_ratings.createIndex({movieId: 1})
