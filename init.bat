@@ -1,0 +1,1 @@
+mongo movielens --quiet init.js
