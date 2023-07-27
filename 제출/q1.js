@@ -16,7 +16,8 @@ db.ml_tags.createIndex({tag:1})
 // var input_title = "Memnto (2000)" 검색 :
 // 11454ms ,25000095개 서치  -> 173ms , 41195 개 서치
 db.ml_movies.createIndex({movieId:1})
-
+db.ml_movies.createIndex({title: 1})
+db.ml_ratings.createIndex({movieId: 1})
 
 
 // Q4에서특정 고객에 대한 평점 성향 파악 위해 input_userid 기준으로 검색해야 하기 때문에 userId를 Index Key로 추가. 
